@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SWEN90013.Views.TaskPages.TaskDetailsView">
+
+    <StackLayout HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand">
+        <ScrollView Orientation="Vertical">
+            <StackLayout>
+                <!--Basic Information-->
+                <StackLayout Padding="10" BackgroundColor="#D5D5D7" Margin="0,15,0,5">
+                    <Label Text="Basic Information" FontAttributes="Bold"
+					       TextColor="Black"
+					       FontSize="Large"
+					       VerticalOptions="Center" />
+                </StackLayout>
+                <StackLayout Padding="10">
+                    <Label Text="Description" FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="Large"
+                           VerticalOptions="Center" />
+                    <Entry Placeholder="Description"
+                           HeightRequest="60"
+                           Margin="0,10,0,10"
+                           IsEnabled="False"
+                           Text="{Binding DuplicateTaskInfo.TaskTypeDescription}"/>
+                    <Label Text="Contractor" FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="Large"
+                           VerticalOptions="Center"
+                           />
+                
+                    <!--<Entry Placeholder="Contractor"
+                           HeightRequest="60"
+                           Margin="0,10,0,10"
+                           Text="{Binding DuplicateTaskInfo.Contractor}"
+                           />-->
+                    <Frame x:Name="FrameClass" Margin="0,10,0,10"
+                           Padding="0"
+                           HasShadow="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Contractor_Button_Clicked"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <Label TextColor="Black"
+                               HorizontalOptions="StartAndExpand"
+                               Margin="8, 20"
+                               Text="{Binding DuplicateTaskInfo.Contractor}"></Label>
+                    </Frame>
+                    <Label Text="Location" FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="Large"
+                           VerticalOptions="Center"
+                           />
+                    <Entry Placeholder="Location"
+                           HeightRequest="60"
+                           Margin="0,10,0,10"
+                           Text="{Binding DuplicateTaskInfo.Location}"/>
+                    <Label Text="Barcode" FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="Large"
+                           VerticalOptions="Center" />
+                    <Entry Placeholder="Barcode"
+                           HeightRequest="60"
+                           Margin="0,10,0,10"
+                           Text="{Binding DuplicateTaskInfo.Barcode}"/>
+                </StackLayout>
+                <!--Detail Information-->
+                <StackLayout Padding="10" BackgroundColor="#D5D5D7" Margin="0,15,0,5">
+                    <Label Text="Detail Information" FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="Large"
+                           VerticalOptions="Center" />
+                </StackLayout>
+                <StackLayout Padding="20">
+                    <Label Text="Relevant OP Number" FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="Large"
+                           VerticalOptions="Center" />
+                    <Entry Placeholder="Relevant OP Number" 
+                           HeightRequest="60"
+                           Margin="0,10,0,10"
+                           Text="{Binding DuplicateTaskInfo.OPNumber}"/>
+                    <Label Text="Owner moving to 2012 standard" FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="Large"
+                           VerticalOptions="Center" />
+                    <Picker HeightRequest="60"
+                            Margin="0,10,0,10"
+                            ItemsSource="{Binding IsMoving2012StandardList}"
+                            SelectedIndex="{Binding IsMoving2012StandardIndex}"/>
+                    <Label Text="Maintained by what standard" FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="Large"
+                           VerticalOptions="Center" />
+                    <Picker HeightRequest="60"
+                            Margin="0,10,0,10"
+                            ItemsSource="{Binding MaintainedStandardList}"
+                            SelectedIndex="{Binding MaintainedStandardIndex}"/>
+                    <Label Text="Last Serviced by" FontAttributes="Bold"
+                           TextColor="Black"
+                           FontSize="Large"
+                           VerticalOptions="Center" />
+                    <Entry Placeholder="Last Serviced by"
+                           Keyboard="Default" 
+                           HeightRequest="60"
+                           Margin="0,10,0,10"
+                           Text="{Binding DuplicateTaskInfo.LastServicedBy}"/>
+                </StackLayout>
+
+                <Button Text="Save"
+                        HorizontalOptions="FillAndExpand"
+                        HeightRequest="60"
+                        CornerRadius="5"
+                        BackgroundColor="Red"
+                        Margin="10, 20, 10, 0"
+                        TextColor="White"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        Command="{Binding SaveTaskInfoCommand}"></Button>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ScrollView>

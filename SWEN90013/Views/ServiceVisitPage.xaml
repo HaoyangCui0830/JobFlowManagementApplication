@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="SWEN90013.Views.ServiceVisitPage"
+			 x:Name="ServiceVisit"
+			 xmlns:local="clr-namespace:SWEN90013.ViewModels"
+             xmlns:global="clr-namespace:SWEN90013"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+			 xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+             Title="Service Visit">
+	<ContentPage.ToolbarItems>
+	</ContentPage.ToolbarItems>
+
+	<ContentPage.BindingContext>
+		<local:ServiceVisitPageViewModel></local:ServiceVisitPageViewModel>
+	</ContentPage.BindingContext>
+
+	<StackLayout HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand">
+		<ScrollView Orientation="Vertical">
+			<StackLayout x:Name="segContainer"
+                         Padding="0,20"
+                         Spacing="12">
+				<StackLayout Padding="20,0">
+					<controls:SegmentedControl x:Name="segControl" 
+                                               ValueChanged="SegControl_ValueChanged"
+                                               TintColor="Red">
+						<controls:SegmentedControl.Children>
+							<controls:SegmentedControlOption Text="Information" />
+							<controls:SegmentedControlOption Text="Details" />
+						</controls:SegmentedControl.Children>
+					</controls:SegmentedControl>
+				</StackLayout>
+
+				<!--This is for information-->
+                <!---->
+                <StackLayout x:Name="segInformation" 
+                             IsVisible="{Binding IsShowingInfo}">
+					<Grid Padding="20,8,20,8"
+				          BackgroundColor="#6b8ebb">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"></RowDefinition>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition></ColumnDefinition>
+							<ColumnDefinition></ColumnDefinition>
+						</Grid.ColumnDefinitions>
+                        <Label Text="{Binding ServiceVisit.FullTitle}" 
+                               FontAttributes="Bold"
+					           TextColor="White"
+					           FontSize="Large"
+					           VerticalOptions="Center"
+					           Grid.Row="0" Grid.Column="0"/>
+                        <Button Text="{Binding SiteImageUploadButtonTxt}" 
+						        BackgroundColor="Transparent"
+						        TextColor="White"
+						        Padding="25,0"
+						        HorizontalOptions="End"
+						        VerticalOptions="End"
+                                Clicked="UploadSitePic_Button_Clicked"
+						        Grid.Row="0" Grid.Column="1"/>
+                    </Grid>
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"></RowDefinition>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="50*"></ColumnDefinition>
+							<ColumnDefinition Width="50*"></ColumnDefinition>
+						</Grid.ColumnDefinitions>
+						<Grid Grid.Column="0" Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="300"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+							<Image Grid.Column="0" Grid.Row="0"
+					               Source="{Binding ServiceVisit.SiteImageUrl}"
+                                   Aspect="AspectFit"></Image>
+						</Grid>
+						<Grid Padding="10" Grid.Column="1">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="Auto" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="23*" />
+								<ColumnDefinition Width="77*"/>
+							</Grid.ColumnDefinitions>
+							<Label Grid.Row="0" Grid.Column="0"
+                                   Text="Address:" FontAttributes="Bold" />
+							<Label Grid.Row="0" Grid.Column="1" 
+						           Text="{Binding ServiceVisit.FullAddress}" 
+						   />
+							<Label Grid.Row="1" Grid.Column="0" 
+						           Text="Contact:" FontAttributes="Bold" />
+							<Label Grid.Row="1" Grid.Column="1" 
+						           Text="{Binding ServiceVisit.ContactSnippt}" 
+						   />
+							<Label Grid.Row="2" Grid.Column="0" 
+						           Text="Status:" FontAttributes="Bold" />
+                            <Label Grid.Row="2" Grid.Column="1"
+							       Text="{Binding ServiceVisit.StatusDescription}" />
+                        </Grid>
+					</Grid>
+					<!--FOR MAP-->
+					<StackLayout x:Name="ServiceVisitMap"
+						 Padding="20"
+						 Margin="50,20"
+						 WidthRequest="100"
+						 HeightRequest="200">
+                        <maps:Map x:Name="Maps" 
+                                  WidthRequest="1"
+                                  HeightRequest="1"
+                                  MapType="Street"
+                                   >
+                        </maps:Map>
+					</StackLayout>
+
+					<!--FOR MEMO-->
+					<StackLayout Padding="20"
+				                 BackgroundColor="#6b8ebb">
+						<Label Text="Memo" FontAttributes="Bold"
+					           TextColor="White"
+					           FontSize="Large"
+					           VerticalOptions="Center" />
+					</StackLayout>
+					<StackLayout Padding="20">
+						<Label Text="Contact memo:"
+					           FontSize="Large" FontAttributes="Bold"/>
+						<Frame OutlineColor="Gray"
+					           HasShadow="false"
+					           WidthRequest="100"
+					           HeightRequest="60">
+							<Label Text="{Binding ServiceVisit.ContactMemo}"/>
+						</Frame>
+						<Label Text="Induction memo:"
+					           FontSize="Large" FontAttributes="Bold"
+					           Margin="0, 20, 0, 0"/>
+						<Frame OutlineColor="Gray"
+					           HasShadow="false"
+					           WidthRequest="100"
+					           HeightRequest="60">
+							<Label Text="{Binding ServiceVisit.InductionMemo}"/>
+						</Frame>
+
+					</StackLayout>
+
+					<!--FOR Tasks-->
+					<StackLayout Padding="20"
+				                 BackgroundColor="#6b8ebb">
+						<Label Text="" FontAttributes="Bold"
+					           TextColor="White"
+					           FontSize="Large"
+					           VerticalOptions="Center" />
+					</StackLayout>
+					<StackLayout Padding="20">
+						<StackLayout Orientation="Horizontal">
+							<Label Text="Number of Total Tasks:" />
+							<Label Text="{Binding ServiceVisit.TotalTasks}"/>
+						</StackLayout>
+						<StackLayout Orientation="Horizontal">
+							<Label Text="Number of Completed Tasks:" />
+							<Label Text="{Binding ServiceVisit.TasksRemaining}"/>
+						</StackLayout>
+					</StackLayout>
+				</StackLayout>
+
+				<!--This is for Detail page-->
+                <!---->
+                <StackLayout x:Name="segDetails" 
+                             IsVisible="{Binding IsShowingDetails}">
+                    <Grid Padding="20,8,20,8"
+                          BackgroundColor="#6b8ebb">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Building Details" FontAttributes="Bold"
+					           TextColor="White"
+					           FontSize="Large"
+					           VerticalOptions="Center"
+					           Grid.Row="0" Grid.Column="0"
+					   />
+                        <Button Text="{Binding BuildingDetailsButtonTxt}" 
+						        BackgroundColor="Red"
+						        TextColor="White"
+						        Padding="25,0"
+                                Margin="0"
+						        HorizontalOptions="End"
+						        VerticalOptions="End"
+						        Grid.Row="0" Grid.Column="1"
+                                x:Name="BuildingDetailsEditButton"
+                                Command="{Binding BuildingDetailsCommand}"
+						/>
+                    </Grid>
+                    <Grid Padding="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="15*"></ColumnDefinition>
+                            <ColumnDefinition Width="85*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" 
+					           Text="Era:" FontAttributes="Bold"
+					           TextColor="Black"></Label>
+                        <Picker Grid.Column="1" Grid.Row="0"
+					            IsEnabled="{Binding IsUpdatingBuildingDetails}"
+                                ItemsSource="{Binding ServiceVisit.BuildingEraList}"
+                                SelectedIndex="{Binding DuplicateBuildingEraIndex}"></Picker>
+                        <Label Grid.Column="0" Grid.Row="1" 
+					           Text="Size:" FontAttributes="Bold"
+					           TextColor="Black"></Label>
+                        <Picker Grid.Column="1" Grid.Row="1"
+					            IsEnabled="{Binding IsUpdatingBuildingDetails}"
+                                ItemsSource="{Binding ServiceVisit.BuildingSizeList}"
+                                SelectedIndex="{Binding DuplicateBuildingSizeIndex}"></Picker>
+                        <Label Grid.Column="0" Grid.Row="3" 
+					           Text="Class:" FontAttributes="Bold"
+					           TextColor="Black"></Label>
+                        <Picker Grid.Column="1" Grid.Row="3"
+					            IsEnabled="{Binding IsUpdatingBuildingDetails}"
+                                ItemsSource="{Binding ServiceVisit.BuildingClassList}"
+                                SelectedIndex="{Binding DuplicateBuildingClassIndex}"></Picker>
+                    </Grid>
+
+                    <Grid Padding="20,8,20,8"
+				          BackgroundColor="#6b8ebb">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Memo" FontAttributes="Bold"
+					           TextColor="White"
+					           FontSize="Large"
+					           VerticalOptions="Center"
+					           Grid.Row="0" Grid.Column="0"/>
+                        <Button x:Name="MemoEditButton" 
+                                Text="{Binding MemoButtonTxt}" 
+						        BackgroundColor="Red"
+						        TextColor="White"
+						        Padding="25,0"
+                                Margin="0"
+						        HorizontalOptions="End"
+						        VerticalOptions="End"
+						        Grid.Row="0" Grid.Column="1"
+                                Command="{Binding MemoCommand}"/>
+                    </Grid>
+                    <StackLayout Padding="20">
+                        <Label Text="Service Memo:" FontSize="Large"
+					           FontAttributes="Bold"></Label>
+                        <Frame OutlineColor="Gray"
+					           HasShadow="false"
+                               Margin="0,0,0,15">
+                            <Editor IsEnabled="{Binding IsUpdatingMemo}"
+                                    Text="{Binding DuplicateMemo.ServiceMemo}"
+                                    HeightRequest="60"></Editor>
+                        </Frame>
+
+                        <Label Text="OHS Memo:" FontSize="Large"
+					           FontAttributes="Bold"></Label>
+                        <Frame OutlineColor="Gray"
+					           HasShadow="false"
+                               Margin="0,0,0,15">
+                            <Editor IsEnabled="{Binding IsUpdatingMemo}" 
+                                    Text="{Binding DuplicateMemo.OHSMemo}"
+                                    HeightRequest="60"></Editor>
+                        </Frame>
+
+                        <Label Text="FSM Memo:" FontSize="Large"
+					           FontAttributes="Bold"></Label>
+                        <Frame OutlineColor="Gray"
+					           HasShadow="false"
+                               Margin="0,0,0,15">
+                            <Editor IsEnabled="{Binding IsUpdatingMemo}"
+                                    Text="{Binding DuplicateMemo.FSMMemo}"
+                                    HeightRequest="60"></Editor>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            
+		</ScrollView>
+
+        <!--This is for overall Tasks List Button-->
+        <AbsoluteLayout HorizontalOptions="FillAndExpand">
+            <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,100"
+					     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+					     BackgroundColor="White"
+                         HeightRequest="101">
+                <BoxView BackgroundColor="Gray"
+					    HeightRequest="1"></BoxView>
+                <Button Text="Go To Tasks List"
+					    HorizontalOptions="Center"
+					    VerticalOptions="Center"
+					    HeightRequest="60"
+					    WidthRequest="400"
+					    Margin="0,15"
+					    BackgroundColor="Red"
+					    TextColor="White"
+					    FontSize="Large"
+					    FontAttributes="Bold"
+                        Clicked="GoToTaskList_Button_Clicked"></Button>
+            </StackLayout>
+        </AbsoluteLayout>
+    </StackLayout>
+</ContentPage>

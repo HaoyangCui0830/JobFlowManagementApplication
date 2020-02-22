@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SWEN90013.Views.AddNewTaskPage"
+             Title="Add New Task">
+   <ContentPage.ToolbarItems>
+         <ToolbarItem Text="Save" Command="{Binding SubmitNewTaskCommand}"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand">
+        <ScrollView Orientation="Vertical">
+            <StackLayout>
+                <!--Basic Information-->
+                <StackLayout Padding="10" BackgroundColor="#D5D5D7" Margin="0,15,0,5">
+				    <Label Text="Basic Information" FontAttributes="Bold"
+					        TextColor="Black"
+					        FontSize="Large"
+					        VerticalOptions="Center" />
+			    </StackLayout>
+                <StackLayout Padding="10">
+                    <Label Text="Equipment Information" FontAttributes="Bold"
+					        TextColor="Black"
+					        FontSize="Large"
+					        VerticalOptions="Center" />
+                    <Frame x:Name="FrameClass2" Margin="0,10,0,10"
+                           Padding="0"
+                           HasShadow="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="EquipmentButton_Clicked"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <Entry TextColor="Black"
+                               HorizontalOptions="CenterAndExpand"
+                               Placeholder="Equipment Information"
+                               IsEnabled="False"
+                               BackgroundColor="white"
+                               HeightRequest="60"
+                               WidthRequest="2000"
+                               Text="{Binding EquipmentName}"></Entry>
+                    </Frame>
+                    <Label Text="Contractor" FontAttributes="Bold"
+					        TextColor="Black"
+					        FontSize="Large"
+					        VerticalOptions="Center" />
+                    <Frame x:Name="FrameClass1" Margin="0,10,0,10"
+                           Padding="0"
+                           HasShadow="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ContractorButton_Clicked"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <Entry TextColor="Black"
+                               HorizontalOptions="StartAndExpand"
+                               HeightRequest="60"
+                               WidthRequest="2000"
+                               Placeholder="Contractor Information"
+                               IsEnabled="False"
+                               BackgroundColor="white"
+                               Text="{Binding Task.TaskInfo.Contractor}"></Entry>
+                    </Frame>
+                    
+                       
+                    <Label Text="Location" FontAttributes="Bold"
+					        TextColor="Black"
+					        FontSize="Large"
+					        VerticalOptions="Center" />
+                      <Entry Placeholder="Location"
+                           HeightRequest="60"
+                           Margin="0,10,0,10"
+                           Text="{Binding Task.TaskInfo.Location}"/>
+                    <Label Text="Barcode" FontAttributes="Bold"
+					        TextColor="Black"
+					        FontSize="Large"
+					        VerticalOptions="Center" />
+                       <Entry Placeholder="Barcode"
+                           Keyboard="Default" 
+                           HeightRequest="60"
+                           Margin="0,10,0,10"
+                           Text="{Binding Task.TaskInfo.Barcode}"
+                           IsTextPredictionEnabled="false"/>
+                 </StackLayout>
+                <!--Detail Information-->
+                <StackLayout Padding="10" BackgroundColor="#D5D5D7" Margin="0,15,0,5">
+				    <Label Text="Detail Information" FontAttributes="Bold"
+					        TextColor="Black"
+					        FontSize="Large"
+					        VerticalOptions="Center" />
+			    </StackLayout>
+                <StackLayout Padding="20">
+                    <Label Text="Relevant OP Number" FontAttributes="Bold"
+					        TextColor="Black"
+					        FontSize="Large"
+					        VerticalOptions="Center" />
+                       <Entry Placeholder="Relevant OP Number"
+                           Keyboard="Default" 
+                           HeightRequest="60"
+                           Margin="0,10,0,10"
+                           Text="{Binding Task.TaskInfo.OPNumber}"
+                           IsTextPredictionEnabled="false"/>
+                    <Label Text="Owner moving to 2012 standard" FontAttributes="Bold"
+					        TextColor="Black"
+					        FontSize="Large"
+					        VerticalOptions="Center" />
+                       <Picker HeightRequest="60"
+                           Margin="0,10,0,10"
+                           ItemsSource="{Binding Task.TaskOwnerStandardList}"
+                           SelectedIndex="{Binding IsMoving2012StandardIndex}"/>
+                    <Label Text="Maintained by what standard" FontAttributes="Bold"
+					        TextColor="Black"
+					        FontSize="Large"
+					        VerticalOptions="Center" />
+                       <Picker HeightRequest="60"
+                           Margin="0,10,0,10"
+                           Title="Select Standard Description"
+                           ItemsSource="{Binding Task.TaskMaintainStandardList}"
+                           SelectedIndex="{Binding MaintainedStandardIndex}"/>
+                    <Label Text="Last Serviced by" FontAttributes="Bold"
+					        TextColor="Black"
+					        FontSize="Large"
+					        VerticalOptions="Center" />
+                       <Entry Placeholder="Last Serviced by"
+                           Keyboard="Default" 
+                           HeightRequest="60"
+                           Margin="0,10,0,10"
+                           Text="{Binding Task.TaskInfo.LastServicedBy}"
+                           IsTextPredictionEnabled="false"/>
+                 </StackLayout>
+           </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

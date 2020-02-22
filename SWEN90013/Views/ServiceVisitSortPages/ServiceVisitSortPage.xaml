@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SWEN90013.Views.ServiceVisitSortPages.ServiceVisitSortPage" Title="Sort">
+     <StackLayout Orientation="Vertical">    
+    <ListView  x:Name="listView" ItemsSource="{Binding Menus}" ItemTapped="Item_Tapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                     <StackLayout Orientation="Horizontal" >         
+                     <Label Text="{Binding Title}" VerticalOptions="Center" Margin="20,0,0,0"/>
+                     <Image Source="{Binding IconName}" HeightRequest="15" WidthRequest="15"/>
+                     <Button Text="{Binding Location}" IsVisible="{Binding IsInnerClickEnable }" Clicked="Location_Clicked"/>
+                     <Image Source="checked.png" 
+                        WidthRequest="20" 
+                        HeightRequest="30"
+                        HorizontalOptions="EndAndExpand" 
+                        Margin="0,0,20,0"
+                        IsVisible="{Binding IsSelected}"/>
+                    </StackLayout>
+                    </ViewCell>  
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    <Button BackgroundColor="Red" Text="CONFIRM" TextColor="White" CornerRadius="0" Clicked="Confirm_Clicked"/>
+</StackLayout>
+</ContentPage>

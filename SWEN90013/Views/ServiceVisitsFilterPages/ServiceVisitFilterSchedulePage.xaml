@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SWEN90013.Views.ServiceVisitPages.ServiceVisitFilterSchedulePage">
+    <ListView ItemsSource="{Binding Schedules}" ItemTapped="Schedule_Tapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                    <ViewCell>
+                     <StackLayout Orientation="Horizontal" >         
+                     <Label Text="{Binding ScheduleDescription}" VerticalOptions="Center" Margin="20,0,0,0"/>
+                     <Image Source="checked.png" 
+                        WidthRequest="20" 
+                        HeightRequest="30"
+                        HorizontalOptions="EndAndExpand" 
+                        Margin="0,0,20,0"
+                        IsVisible="{Binding IsSelected}"/>
+                     </StackLayout>
+                     </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                </ListView>
+</ContentPage>

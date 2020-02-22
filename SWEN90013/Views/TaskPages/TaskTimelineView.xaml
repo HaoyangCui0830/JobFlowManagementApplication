@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SWEN90013.Views.TaskPages.TaskTimelineView"
+             xmlns:components="clr-namespace:SWEN90013.CustomComponents">
+  <ContentView.Content>
+      <StackLayout>
+             <Grid Padding="20,8,20,8"
+                          BackgroundColor="Silver">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+            <Label Text="HISTORY" FontAttributes="Bold"
+                               TextColor="Black"
+                               FontSize="Large"
+                               VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+            </Grid>
+            <ListView 
+                      HasUnevenRows="true" 
+                      SeparatorVisibility="None"
+                 ItemsSource="{Binding Timelines}"
+            ItemAppearing="Handle_ItemAppearing">
+    
+                <ListView.ItemTemplate>  
+                    <DataTemplate>  
+                        <components:NoHighlightViewCell>       
+                            <Frame OutlineColor="Gray"
+                                   BackgroundColor="{Binding ColorResult}"
+                                   CornerRadius="10"
+                                   HasShadow="false"
+                                   Margin="20,10,20,10"
+                                   Padding="0"
+                                   HorizontalOptions="FillAndExpand"> 
+                                  <StackLayout
+                                    Orientation="Vertical"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand" 
+                                   >
+                                 <Label Text="{Binding DateResult}" 
+                                           FontSize="25"
+                                           TextColor="White"
+                                           FontAttributes="Bold"
+                                           Margin = "20, 10, 20, 10">
+                                </Label>
+                                    <Grid Padding="0,0,0,-10"
+                          BackgroundColor="White"  IsVisible="{Binding IsDefectsEmpty}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                                 <Label Text="    No comment for this entry" 
+                                           FontSize="25"
+                                           TextColor="Black"
+                                           FontAttributes="Bold"
+                                           Margin = "0, 10, 0, 0"
+                                        BackgroundColor="White"
+                                        HeightRequest="100"
+                                       Grid.Row="0" Grid.Column="0">
+                                </Label>
+                                        </Grid>
+                                <StackLayout BindableLayout.ItemsSource="{Binding Defects}"
+                                             VerticalOptions="Fill" IsVisible="{Binding IsDefectNotEmpty}">
+                                 <BindableLayout.ItemTemplate>
+                                            <DataTemplate>
+                                         <StackLayout Padding="0, 0, 0, -10">      
+                                <Grid Padding="20,20,0,-10"
+                                 BackgroundColor="White">
+                                <Grid.RowDefinitions>
+                                  <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                  </Grid.ColumnDefinitions>
+                                   <Image Grid.Column="0" Grid.Row="0"
+                                   Source="{Binding ImageUrl}"
+                                   Aspect="Fill" Margin="0,0,0,50" >
+                                    </Image>
+                                 <Label Text="{Binding Comment}" FontAttributes="Bold"
+                                 TextColor="Black"
+                                 FontSize="Large"
+                                 VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Margin="20,10,20,50"/>
+                                </Grid>
+                                    </StackLayout>
+                                                </DataTemplate>
+                                        </BindableLayout.ItemTemplate> 
+                                 </StackLayout>
+                                 
+                            </StackLayout>
+                         </Frame>
+                        </components:NoHighlightViewCell>
+                    </DataTemplate>  
+                </ListView.ItemTemplate> 
+            </ListView>   
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

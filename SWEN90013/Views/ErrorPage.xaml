@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SWEN90013.Views.ErrorPage"
+    NavigationPage.HasNavigationBar="false">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+    <!-- Place new controls here -->
+        <Image Source="warning" HeightRequest="50" WidthRequest="50" />
+        <Label Text="It seems that you have encountered an error or are not connected to the internet"
+               FontSize="20"></Label>
+        <Button Text="Retry"
+                FontSize="20"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Command="{Binding RetryPreviousPageCommand}"/>
+    </StackLayout>
+</ContentPage>

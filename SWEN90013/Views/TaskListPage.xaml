@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SWEN90013.Views.TaskListPage"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:components="clr-namespace:SWEN90013.CustomComponents"
+             xmlns:converter="clr-namespace:SWEN90013.Converters"
+             Title="Tasks">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:InverseBoolConverter x:Key="inverseBool" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="AddTasks" Text="+ Add New Task"
+                     Order="Primary" Priority="1"
+                     Clicked="AddNewTaskClicked"/>
+        <ToolbarItem Name="BarcodeScan" Order="Primary" Priority="0" Icon="barcode-scanner_toolbaricon.png"
+                     Clicked="BarcodeIconClicked"
+                     />
+    </ContentPage.ToolbarItems>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <components:StyledSearchBar Placeholder="Search"
+                                    FontSize="20"
+                                    BackgroundColor="White"
+                                    TextColor="Black"
+                                    Text="{Binding SearchedTerm}"
+                                    Grid.Row="0">
+        </components:StyledSearchBar>
+
+        <Grid IsVisible="{Binding IsBusy}"
+              Grid.Row="1">
+            <Grid x:Name="loadingOverlay" VerticalOptions="Center" HorizontalOptions="Center">
+                <ActivityIndicator Grid.Row="0" Grid.Column="0" IsRunning="true" Scale="2" Color="Black"/>
+            </Grid>
+        </Grid>
+
+        <ScrollView Grid.Row="1" Orientation="Vertical"
+                    VerticalOptions="Start"
+                    IsVisible="{Binding IsBusy, Converter={StaticResource inverseBool}}">
+            <StackLayout VerticalOptions="Start">
+                <!--TO DO LIST-->
+                <StackLayout Orientation="Vertical"
+                             Padding="20,20"
+                             BackgroundColor="Silver">
+                    <Label Text="{Binding ToDoTasksTitle}" FontAttributes="Bold" />
+                </StackLayout>
+
+                <StackLayout IsVisible="{Binding IsNoToDoTasks}"
+                             Margin="20">
+                    <Label Text="No To do Tasks"
+                           HorizontalOptions="Center"></Label>
+                </StackLayout>
+                <flv:FlowListView FlowColumnCount="3"
+                                  SeparatorVisibility="None"
+                                  HasUnevenRows="False"
+                                  RowHeight="220"
+                                  VerticalOptions="Start"
+                                  FlowItemTappedCommand="{Binding ItemTappedCommand}"
+                                  FlowItemsSource="{Binding ToDoTasks}"
+                                  IsVisible="{Binding IsNoToDoTasks, Converter={StaticResource inverseBool}}">
+                    <flv:FlowListView.FlowColumnTemplate>
+                        <DataTemplate>
+                            <Frame OutlineColor="Gray" Margin="10"
+                                   CornerRadius="0"
+                                   Padding="0"
+                                   HasShadow="False">
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal"
+                                                 BackgroundColor="Silver"
+                                                 Padding="5, 10"
+                                                 Margin="0">
+                                        <Label Text="{Binding TaskInfo.TaskTypeDescription}" 
+                                        />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Vertical"
+                                                 Padding="10">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Source="location-black.png"
+                                                   WidthRequest="20" HeightRequest="20"
+                                                   Aspect="AspectFit"></Image>
+                                            <Label Text="{Binding TaskInfo.Location}" />
+                                        </StackLayout>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50*" />
+                                                <ColumnDefinition Width="50*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout Grid.Row="0" Grid.Column="0" 
+                                                            Orientation="Vertical">
+                                                <Label Text="Last Service"
+                                                        FontAttributes="Bold"/>
+                                                <Label Text="{Binding LastServiceText}" />
+                                            </StackLayout>
+                                            <StackLayout Grid.Row="0" Grid.Column="1"
+                                                            Orientation="Vertical">
+                                                <Label Text="REF."
+                                                        FontAttributes="Bold"/>
+                                                <Label Text="{Binding ServiceVisitItemNumber}" />
+                                            </StackLayout>
+                                            <StackLayout Grid.Row="1" Grid.Column="0" 
+                                                            Orientation="Vertical">
+                                                <Label Text="Last result"
+                                                        FontAttributes="Bold"/>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Image Source="{Binding LastResultIconUrl}"
+                                                            HeightRequest="20" WidthRequest="20"
+                                                            Aspect="AspectFit"></Image>
+                                                    <Label Text="{Binding LastResultText}" />
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </flv:FlowListView.FlowColumnTemplate>
+                </flv:FlowListView>
+
+                <!--Done LIST-->
+                <StackLayout Orientation="Vertical"
+                             Padding="20,20"
+                             BackgroundColor="Silver">
+                    <Label Text="Done" FontAttributes="Bold" />
+                </StackLayout>
+
+                <StackLayout IsVisible="{Binding IsNoDoneTasks}"
+                             Margin="20">
+                    <Label Text="No Done Tasks"
+                           HorizontalOptions="Center"></Label>
+                </StackLayout>
+                <flv:FlowListView FlowColumnCount="3"
+                                  SeparatorVisibility="None"
+                                  HasUnevenRows="False"
+                                  RowHeight="220"
+                                  FlowItemTappedCommand="{Binding ItemTappedCommand}"
+                                  FlowItemsSource="{Binding DoneTasks}"
+                                  IsVisible="{Binding IsNoDoneTasks, Converter={StaticResource inverseBool}}">
+                    <flv:FlowListView.FlowColumnTemplate>
+                        <DataTemplate>
+                            <Frame OutlineColor="Gray" Margin="10"
+                                   CornerRadius="0"
+                                   Padding="0"
+                                   HasShadow="False"
+                                   BackgroundColor="{Binding ThisResultBgColor}">
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal"
+                                                 BackgroundColor="Silver"
+                                                 Padding="5, 10"
+                                                 Margin="0">
+                                        <Label Text="{Binding TaskInfo.TaskTypeDescription}" 
+                                        />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Vertical"
+                                                 Padding="10"
+                                                 Margin="0">
+                                        <StackLayout Orientation="Horizontal"
+                                                     Margin="0">
+                                            <Image Source="location-black.png"
+                                                        WidthRequest="20" HeightRequest="20"
+                                                        Aspect="AspectFit"></Image>
+                                            <Label Text="{Binding TaskInfo.Location}" />
+                                        </StackLayout>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50*" />
+                                                <ColumnDefinition Width="50*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout Grid.Row="0" Grid.Column="0" 
+                                                            Orientation="Vertical">
+                                                <Label Text="Last Service"
+                                                        FontAttributes="Bold"/>
+                                                <Label Text="{Binding LastServiceText}" />
+                                            </StackLayout>
+                                            <StackLayout Grid.Row="0" Grid.Column="1"
+                                                            Orientation="Vertical">
+                                                <Label Text="REF."
+                                                        FontAttributes="Bold"/>
+                                                <Label Text="{Binding ServiceVisitItemNumber}" />
+                                            </StackLayout>
+                                            <StackLayout Grid.Row="1" Grid.Column="0" 
+                                                            Orientation="Vertical">
+                                                <Label Text="This result"
+                                                        FontAttributes="Bold"/>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Image Source="{Binding ThisResultIconUrl}"
+                                                            HeightRequest="20" WidthRequest="20"
+                                                            Aspect="AspectFit"></Image>
+                                                    <Label Text="{Binding ThisResult}" />
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </flv:FlowListView.FlowColumnTemplate>
+                </flv:FlowListView>
+
+            </StackLayout>
+        </ScrollView>
+        
+        <Button Grid.Row="2" Text="Submit"
+                CornerRadius="0"
+                BackgroundColor="Red"
+                TextColor="White"
+                Command="{Binding SubmitCommand}"/>
+    </Grid>
+</ContentPage>

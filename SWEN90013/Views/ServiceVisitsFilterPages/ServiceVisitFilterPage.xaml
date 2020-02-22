@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SWEN90013.Views.ServiceVisitPages.ServiceVisitFilterPage" Title="Filter">
+   <StackLayout Orientation="Vertical"> 
+    <TableView Intent="Settings">
+    <TableRoot>
+        <TableSection TextColor="Black" Title="Suburb">
+        <ViewCell Tapped="Suburb_Clicked">
+            <StackLayout Orientation="Horizontal">         
+                <Label Text="{Binding SelectedSuburbsString}" VerticalOptions="Center" Margin="20,0,0,0"/>
+                <Image Source="arrow-down.png" 
+                        WidthRequest="20" 
+                        HeightRequest="30"
+                        HorizontalOptions="EndAndExpand" 
+                        Margin="0,0,20,0"/>
+             </StackLayout>
+        </ViewCell>    
+        </TableSection>
+        <TableSection TextColor="Black" Title="Calendar">
+           <ViewCell Tapped="Schedule_Clicked">
+            <StackLayout Orientation="Horizontal">         
+                <Label Text="{Binding SelectedScheduleString}" VerticalOptions="Center" Margin="20,0,0,0"/>
+                <Image Source="arrow-down.png" 
+                        WidthRequest="20" 
+                        HeightRequest="30"
+                        HorizontalOptions="EndAndExpand" 
+                        Margin="0,0,20,0"
+                      />
+             </StackLayout>
+        </ViewCell>    
+        </TableSection>
+        <TableSection Title="Due date" TextColor="Black">
+            <ViewCell Tapped="AllDueDate_Tapped">
+            <StackLayout Orientation="Horizontal" >         
+                <Label Text="All" VerticalOptions="Center" Margin="20,0,0,0"/>
+                <Image Source="checked.png" 
+                        WidthRequest="20" 
+                        HeightRequest="30"
+                        HorizontalOptions="EndAndExpand" 
+                        Margin="0,0,20,0"
+                        IsVisible="{Binding IsAllDueDate}"/>
+             </StackLayout>
+                     </ViewCell>
+            <ViewCell Tapped="ThisMonthDueDate_Tapped">
+            <StackLayout Orientation="Horizontal">         
+                <Label Text="This Month" VerticalOptions="Center" Margin="20,0,0,0"/>
+                <Image Source="checked.png" 
+                        WidthRequest="20" 
+                        HeightRequest="30"
+                        HorizontalOptions="EndAndExpand" 
+                        Margin="0,0,20,0" IsVisible= "{Binding IsThisMonthDueDate}"/>
+             </StackLayout>
+        
+        </ViewCell> 
+        </TableSection>
+        <TableSection Title="Status" TextColor="Black">
+            <ViewCell Tapped="Status_Clicked">
+            <StackLayout Orientation="Horizontal">         
+                <Label Text="{Binding SelectedStatusString}" VerticalOptions="Center" Margin="20,0,0,0"/>
+                <Image Source="arrow-down.png" 
+                        WidthRequest="20" 
+                        HeightRequest="30"
+                        HorizontalOptions="EndAndExpand" 
+                        Margin="0,0,20,0"/>
+             </StackLayout>
+        </ViewCell>    
+        </TableSection>
+    </TableRoot>
+</TableView>
+        <Button BackgroundColor="Red" Text="CONFIRM" TextColor="White" CornerRadius="0" Clicked="Confirm_Clicked">
+        </Button>
+</StackLayout>
+</ContentPage>

@@ -1,0 +1,2142 @@
+[
+ {
+   "EquipmentTypeID": "1",
+   "Description": "Emergency Lifts",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "10",
+   "Description": "Fire Curtains",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "100",
+   "Description": "Smoke Compartmentation",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "101",
+   "Description": "Vibration Joints",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "102",
+   "Description": "Evacuation Diagrams",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "103",
+   "Description": "Lifts",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "104",
+   "Description": "Wet Chemical Suppression system",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "105",
+   "Description": "Automatic Doors",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "106",
+   "Description": "Cleaning - FIP Control Room",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "107",
+   "Description": "Cleaning - Sprinkler Pump Room",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "108",
+   "Description": "Dry Battery replacement",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "109",
+   "Description": "Wet Battery replacement",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "11",
+   "Description": "Fire indices for materials",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "110",
+   "Description": "VESDA",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "111",
+   "Description": "Water Mist System",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "112",
+   "Description": "Room Integrity Test",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "113",
+   "Description": "FIP Plans",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "114",
+   "Description": "Evac Plans",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "115",
+   "Description": "Smoke Camera",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "116",
+   "Description": "Safe Refuge for persons with disabilities",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "12",
+   "Description": "Fire Isolated Lift Shafts",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "121",
+   "Description": "No Combustible Furn are perm within 2m glazed strs",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "122",
+   "Description": "Pre-Action System",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "13",
+   "Description": "Fire Protective Coverings ",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "14",
+   "Description": "Fire Rated Control Joints ",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "15",
+   "Description": "Fire Rated Material Applied To Build Elements ",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "16",
+   "Description": "Fire rated access panels",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "17",
+   "Description": "Fire resisting shafts",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "18",
+   "Description": "Fire resisting structures",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "19",
+   "Description": "Fire Shutters ",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "2",
+   "Description": "Exit Doors",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "20",
+   "Description": "Fire Windows",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "21",
+   "Description": "Lifts - Warning Systems",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "22",
+   "Description": "Lightweight construction",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "23",
+   "Description": "Penetrations in fire rated structures",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "24",
+   "Description": "Fire Control Centre",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "25",
+   "Description": "Fire Detection & Alarm Systems",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "26",
+   "Description": "Fire Brigade Connections",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "27",
+   "Description": "Fire Control Panels",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "28",
+   "Description": "Fire extinguishers (portable)",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "29",
+   "Description": "Fire Hose Reels",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "3",
+   "Description": "Fire Doors ",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "30",
+   "Description": "Fire Hydrants",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "31",
+   "Description": "Smoke Alarms ",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "32",
+   "Description": "Sprinkler systems",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "33",
+   "Description": "Static water supply",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "34",
+   "Description": "Sprinkler Pumpsets",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "35",
+   "Description": "Air Conditioning Systems ",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "36",
+   "Description": "Mechanical ventilation systems",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "37",
+   "Description": "Fire Mains",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "38",
+   "Description": "Stairwell Pressurisation Systems ",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "39",
+   "Description": "Fire Dampers",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "4",
+   "Description": "Fire Isolated Passageways",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "40",
+   "Description": "Smoke vents",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "41",
+   "Description": "Emergency Lighting",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "42",
+   "Description": "Emergency Power Supply",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "43",
+   "Description": "EWIS System",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "44",
+   "Description": "Exit Signs",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "45",
+   "Description": "Cathodic Protection ",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "46",
+   "Description": "Thermoscan",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "47",
+   "Description": "Safety Showers",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "48",
+   "Description": "Breathing Apparatus",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "49",
+   "Description": "Failsafe Systems ",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "5",
+   "Description": "Fire Isolated Ramps",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "50",
+   "Description": "Monitors",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "51",
+   "Description": "Pits",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "52",
+   "Description": "Line Flushing",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "53",
+   "Description": "Fire Engines",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "54",
+   "Description": "Emergency Lighting & Exit Signs",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "55",
+   "Description": "Gaseous Suppression",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "56",
+   "Description": "Occupant Warning System",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "58",
+   "Description": "Fire Brigade Intercoms",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "59",
+   "Description": "Paths of Travel & Exit Doors",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "6",
+   "Description": "Fire Isolated Stairs",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "60",
+   "Description": "Sprinkler systems & Pumps",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "61",
+   "Description": "Full Function Fire Mode Test",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "62",
+   "Description": "Isolation Valve",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "63",
+   "Description": "Ring Main",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "64",
+   "Description": "Foam Systems",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "65",
+   "Description": "Hydrant Pumpsets",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "66",
+   "Description": "Booster Connection",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "67",
+   "Description": "Lay Flat Hose",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "68",
+   "Description": "Maintenance Determination",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "69",
+   "Description": "Annual Essential Safety Measures Report",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "7",
+   "Description": "Smoke Doors",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "70",
+   "Description": "Artificial Lighting",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "71",
+   "Description": "Glazed Assemblies",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "72",
+   "Description": "Balconies",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "73",
+   "Description": "Balustrades",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "74",
+   "Description": "Means of Egress",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "75",
+   "Description": "Discharge From Exits",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "76",
+   "Description": "Sales Margin",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "77",
+   "Description": "Battery Replacement",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "78",
+   "Description": "Passive essential safety measures",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "79",
+   "Description": "Eye Wash",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "8",
+   "Description": "Paths of Travel to Exits",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "80",
+   "Description": "Smoke Curtains",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "81",
+   "Description": "Building Elements to satisfy fire resistance lvls",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "82",
+   "Description": "Materials & Assemblies for fire hazard properties",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "83",
+   "Description": "Elements required to be non-combustible",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "84",
+   "Description": "Fire-protection at service penetrations",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "85",
+   "Description": "Fire protection assoc/wh constr joints, spaces etc",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "86",
+   "Description": "Classification and use of building",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "87",
+   "Description": "Occupancy hazard",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "88",
+   "Description": "Signs alerting that doors must not be impaired",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "89",
+   "Description": "Doors (other than fire & smoke doors)",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "9",
+   "Description": "Vehicular access around large isolated buildings ",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "90",
+   "Description": "Enclosure of space under non-fire-rated stair/ramp",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "91",
+   "Description": "Exits",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "92",
+   "Description": "Exit Travel",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "93",
+   "Description": "Fire compartmentation",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "94",
+   "Description": "Fire Engineering Assessment Report Requirement",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "95",
+   "Description": "Provision for special hazards",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "96",
+   "Description": "Wall-wetting Sprinklers",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "97",
+   "Description": "Fire / Smoke Isolation",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "98",
+   "Description": "Fire Loading",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "99",
+   "Description": "Fire Rated Facade Treatment",
+   "PassiveFlag": 1
+ },
+ {
+   "EquipmentTypeID": "AL000",
+   "Description": "LOCAL ALARM",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BA000",
+   "Description": "BA APPARATUS",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BC000",
+   "Description": "BCF EXTGUISHER",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BC001",
+   "Description": "BCF EXTG  MOBILE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BH000",
+   "Description": "HYDRANT BOOSTER",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BL000",
+   "Description": "BALUSTRADES - EGRESS",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BL001",
+   "Description": "BALCONIES - EGRESS",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BO000",
+   "Description": "BOOSTER CONNECTION",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BOC01",
+   "Description": "COMBINED BOOSTER 1 HEAD",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BOC02",
+   "Description": "COMBINED BOOSTER 2 HEAD",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BOC04",
+   "Description": "COMBINED BOOSTER 4 HEAD",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BOH01",
+   "Description": "HYDRANT BOOSTER 1 HEAD",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BOH02",
+   "Description": "HYDRANT BOOSTER 2 HEAD",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BOH04",
+   "Description": "HYDRANT BOOSTER 4 HEAD",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BOP01",
+   "Description": "SUCTION POINT",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BOS01",
+   "Description": "SPRINKLER BOOSTER 1 HEAD",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BOS02",
+   "Description": "SPRINKLER BOOSTER 2 HEAD",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BOS04",
+   "Description": "SPRINKLER BOOSTER 4 HEAD",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BP000",
+   "Description": "BRANCHPIPE HOSE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BR000",
+   "Description": "BRANCHPIPE HOSE REEL",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "BS000",
+   "Description": "SPRINKLER BOOSTER",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO000",
+   "Description": "CO2 EXTG - GENERAL",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO040",
+   "Description": "CO2 EXTG 1Kg",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO080",
+   "Description": "CO2 EXTG 2KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO100",
+   "Description": "CO2 EXTG 2.27KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO110",
+   "Description": "CO2 EXTG 2.3KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO160",
+   "Description": "CO2 EXTG 3KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO180",
+   "Description": "CO2 EXTG 3.4KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO190",
+   "Description": "CO2 EXTG 3.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO220",
+   "Description": "CO2 EXTG 4KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO250",
+   "Description": "CO2 EXTG 4.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO280",
+   "Description": "CO2 EXTG 5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO310",
+   "Description": "CO2 EXTG 5.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO340",
+   "Description": "CO2 EXTG 6KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO370",
+   "Description": "CO2 EXTG 6.8KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO380",
+   "Description": "CO2 EXTG 7KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO420",
+   "Description": "CO2 EXTG 8KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO460",
+   "Description": "CO2 EXTG 9KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO510",
+   "Description": "CO2 EXTG 10KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO511",
+   "Description": "CO2 EXTG 10KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO641",
+   "Description": "CO2 EXTG 15KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO671",
+   "Description": "CO2 EXTG 20KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO701",
+   "Description": "CO2 EXTG 25KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO771",
+   "Description": "CO2 EXTG 40KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO791",
+   "Description": "CO2 EXTG 45KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO851",
+   "Description": "CO2 EXTG 60KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "CO900",
+   "Description": "CO2 GAS SUSPRESS CYLINDER",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA030",
+   "Description": "DP ABE EXTG .9KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA040",
+   "Description": "DP ABE EXTG 1KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA050",
+   "Description": "DP ABE EXTG 1.1KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA060",
+   "Description": "DP ABE EXTG 1.25KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA070",
+   "Description": "DP ABE EXTG 1.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA080",
+   "Description": "DP ABE EXTG 2KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA081",
+   "Description": "DP ABE EXTG 2.1KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA090",
+   "Description": "DP ABE EXTG 2.25KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA110",
+   "Description": "DP ABE EXTG 2.3KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA130",
+   "Description": "DP ABE EXTG 2.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA140",
+   "Description": "DP ABE EXTG 2.7KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA160",
+   "Description": "DP ABE EXTG 3KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA170",
+   "Description": "DP ABE EXTG 3.2KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA220",
+   "Description": "DP ABE EXTG 4KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA250",
+   "Description": "DP ABE EXTG 4.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA280",
+   "Description": "DP ABE EXTG 5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA340",
+   "Description": "DP ABE EXTG 6KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA370",
+   "Description": "DP ABE EXTG 6.8KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA380",
+   "Description": "DP ABE EXTG 7KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA400",
+   "Description": "DP ABE EXTG 7.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA410",
+   "Description": "DP ABE EXTG 7.7KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA420",
+   "Description": "DP ABE EXTG 8KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA460",
+   "Description": "DP ABE EXTG 9KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA461",
+   "Description": "DP ABE EXTG 9KG M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA510",
+   "Description": "DP ABE EXTG 10KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA511",
+   "Description": "DP ABE EXTG 10KG M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA550",
+   "Description": "DP ABE EXTG 11KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA551",
+   "Description": "DP ABE EXTG 11KG M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA560",
+   "Description": "DP ABE EXTG 11.4KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA561",
+   "Description": "DP ABE EXTG 11.4KG M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA570",
+   "Description": "DP ABE EXTG 11.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA571",
+   "Description": "DP ABE EXTG 11.5KG M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA610",
+   "Description": "DP ABE EXTG 12.5KG +",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA611",
+   "Description": "DP ABE EXTG 12.5KG M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA620",
+   "Description": "DP ABE EXTG 13.6KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA671",
+   "Description": "DP ABE EXTG 20KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA771",
+   "Description": "DP ABE EXTG 40KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DA851",
+   "Description": "DP ABE EXTG 60KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB030",
+   "Description": "DP BE EXTG .9KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB040",
+   "Description": "DP BE EXTG 1KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB050",
+   "Description": "DP BE EXTG 1.1KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB060",
+   "Description": "DP BE EXTG 1.25KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB070",
+   "Description": "DP BE EXTG 1.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB080",
+   "Description": "DP BE EXTG 2KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB090",
+   "Description": "DP BE EXTG 2.25KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB110",
+   "Description": "DP BE EXTG 2.3KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB130",
+   "Description": "DP BE EXTG 2.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB140",
+   "Description": "DP BE EXTG 2.7KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB160",
+   "Description": "DP BE EXTG 3KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB170",
+   "Description": "DP BE EXTG 3.2KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB220",
+   "Description": "DP BE EXTG 4KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB250",
+   "Description": "DP BE EXTG 4.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB280",
+   "Description": "DP BE EXTG 5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB340",
+   "Description": "DP BE EXTG 6KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB370",
+   "Description": "DP BE EXTG 6.8KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB380",
+   "Description": "DP BE EXTG 7KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB400",
+   "Description": "DP BE EXTG 7.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB410",
+   "Description": "DP BE EXTG 7.7KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB420",
+   "Description": "DP BE EXTG 8KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB460",
+   "Description": "DP BE EXTG 9KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB461",
+   "Description": "DP BE EXTG 9KG M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB510",
+   "Description": "DP BE EXTG 10KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB511",
+   "Description": "DP BE EXTG 10KG M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB550",
+   "Description": "DP BE EXTG 11KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB551",
+   "Description": "DP BE EXTG 11KG M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB560",
+   "Description": "DP BE EXTG 11.4KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB561",
+   "Description": "DP BE EXTG 11.4KG M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB570",
+   "Description": "DP BE EXTG 11.5KG+",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB571",
+   "Description": "DP BE EXTG 11.5KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB620",
+   "Description": "DP BE EXTG 13.6KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB641",
+   "Description": "DP BE EXTG 15KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB701",
+   "Description": "DP BE EXTG 25KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB811",
+   "Description": "DP BE EXTG 50KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DB891",
+   "Description": "DP BE EXTG 70KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DG460",
+   "Description": "D-MAG EXTG 9KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DG461",
+   "Description": "D-MAG EXTG 9KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DG811",
+   "Description": "D-MAG EXTG 50KG M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DL460",
+   "Description": "D-LITH EXTG 9KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DL461",
+   "Description": "D-LITH EXTG 9KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "DP000",
+   "Description": "DP EXTGUISHER GENERAL",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "ED000",
+   "Description": "EXIT DOOR",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "EF000",
+   "Description": "EXIT/FIRE DOOR",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "EL000",
+   "Description": "EXIT LIGHTING",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "EM000",
+   "Description": "EMERGENCY LIGHTING",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "EY000",
+   "Description": "EYE WASH ",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FB000",
+   "Description": "FIRE BLANKET",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FB001",
+   "Description": "FIRE BLANKET 1M x1M ",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FB002",
+   "Description": "FIRE BLANKET 1.2Mx1.2M ",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FB003",
+   "Description": "FIRE BLANKET 1.2Mx1.8M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FB004",
+   "Description": "FIRE BLANKET 1.8Mx1.8M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FC000",
+   "Description": "FIRE CONTROL ROOM",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FD000",
+   "Description": "FIRE DOOR",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FE000",
+   "Description": "FIRE ENGINE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FG000",
+   "Description": "FM-200 SYSTEM",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FM000",
+   "Description": "FOAM COMPOUND",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FO460",
+   "Description": "FOAM EXTG 9L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FO461",
+   "Description": "FOAM EXTG 9L+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FP000",
+   "Description": "FIRE MAIN",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FP001",
+   "Description": "HYDRANT FIRE MAIN",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FP002",
+   "Description": "HOSE REEL FIRE MAIN",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FS000",
+   "Description": "FIRE SHUTTER",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FS001",
+   "Description": "FIRE / SMOKE DAMPER",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FT000",
+   "Description": "FIRE INDICATOR PANEL",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FW000",
+   "Description": "FACE WASH",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "FX000",
+   "Description": "SLIDING FIRE DOOR",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "GF460",
+   "Description": "GAS/FOAM EXTG 9L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "GW460",
+   "Description": "GAS/WATER EXTG 9L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HF550",
+   "Description": "HOSE REEL FOAM UNIT 11L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HF570",
+   "Description": "HOSE REEL FOAM UNIT 11.5L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HF610",
+   "Description": "HOSE REEL FOAM UNIT 12L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HP340",
+   "Description": "HYDROSPRAY EXTG 6L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HP461",
+   "Description": "HYDROSPRAY EXTG 9L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HP462",
+   "Description": "HYDROSPRAY EXTG 9L+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HR000",
+   "Description": "HOSE REEL",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HR030",
+   "Description": "HOSE REEL 30 METRE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HR036",
+   "Description": "HOSE REEL 36 METRE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HR050",
+   "Description": "HOSE REEL 50 METRE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HR100",
+   "Description": "HOSE REEL SWING TYPE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HS000",
+   "Description": "FIRE HOSE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HS001",
+   "Description": "FIRE HOSE 64MM - METRO",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HS064",
+   "Description": "FIRE HOSE 64MM",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HY000",
+   "Description": "HYDRANT",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HY001",
+   "Description": "L HYDRANT",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HY002",
+   "Description": "GROUNDBALL HYDRANT",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HY003",
+   "Description": "HYDRANT WITH FLOW TEST",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HY004",
+   "Description": "HYDRANT SERVICE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "HY005",
+   "Description": "HYDRANT WALL WETTING",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "IV000",
+   "Description": "ISOLATION VALVE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "KN000",
+   "Description": "KNAPSACK",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "LS000",
+   "Description": "LIGHTING SYSTEM",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO080",
+   "Description": "MONNEX EXTG 2KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO160",
+   "Description": "MONNEX EXTG 3KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO190",
+   "Description": "MONNEX EXTG 3.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO220",
+   "Description": "MONNEX EXTG 4KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO250",
+   "Description": "MONNEX EXTG 4.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO280",
+   "Description": "MONNEX EXTG 5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO340",
+   "Description": "MONNEX EXTG 6KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO370",
+   "Description": "MONNEX EXTG 6.8KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO380",
+   "Description": "MONNEX EXTG 7KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO410",
+   "Description": "MONNEX EXTG 7.7KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO420",
+   "Description": "MONNEX EXTG 8KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO460",
+   "Description": "MONNEX EXTG 9KG+",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO461",
+   "Description": "MONNEX EXTG 9KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO641",
+   "Description": "MONNEX EXTG 15 KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO671",
+   "Description": "MONNEX EXTG 20KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO701",
+   "Description": "MONNEX EXTG 25KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO771",
+   "Description": "MONNEX EXTG 40KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO811",
+   "Description": "MONNEX EXTG 50KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MO851",
+   "Description": "MONNEX EXTG 60KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "MT000",
+   "Description": "MONITOR",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "QA000",
+   "Description": "PATHS OF TRAVEL",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "QD000",
+   "Description": "DISCHARGE FROM EXITS",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "QI000",
+   "Description": "FIRE INDICES FOR MATERIALS",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "QL000",
+   "Description": "ARTIFICIAL LIGHTING",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "QM000",
+   "Description": "MEANS OF EGRESS",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "RA000",
+   "Description": "PIT",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SA460",
+   "Description": "SODA ACID EXTG 9L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SC000",
+   "Description": "ECO FOAM EXTG FF",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SD000",
+   "Description": "SMOKE DETECTOR",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SF460",
+   "Description": "SPF/AFFF EXTG 9L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SF461",
+   "Description": "SPF/AFFF EXTG 9L-25L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SF470",
+   "Description": "SPF/AFFF EXTG 9.1L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SF480",
+   "Description": "SPF/AFFF EXTG 9.4L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SF701",
+   "Description": "SPF/AFFF EXTG 25L+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SF791",
+   "Description": "SPF/AFFF EXTG 45L+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SF800",
+   "Description": "SPF/SOLBERG EXTG 9",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SH000",
+   "Description": "SAFETY SHOWER",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SH001",
+   "Description": "SAFETY SHOWER - PORTABLE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SK000",
+   "Description": "SPILL KIT",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SR000",
+   "Description": "SPRINKLER SYSTEM RESIDENTIAL",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SS000",
+   "Description": "SMOKE DOOR",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "ST460",
+   "Description": "SPF/ATC EXTG 9L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "ST461",
+   "Description": "SPF/ATC EXTG 9L+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "ST470",
+   "Description": "SPF/ATC EXTG 9.1L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "ST480",
+   "Description": "SPF/ATC EXTG 9.4L+",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SW460",
+   "Description": "SPW EXTG 9L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SW470",
+   "Description": "SPW EXTG 9.1L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SW480",
+   "Description": "SPW EXTG 9.4L+",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "SY000",
+   "Description": "COMB S SHOWER/EYE WASH",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "TT001",
+   "Description": "LEAD",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "TT002",
+   "Description": "APPLIANCE LEAD",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "TT003",
+   "Description": "AC ADAPTOR",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "TT004",
+   "Description": "CHARGER",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "TT005",
+   "Description": "POWER BOARD",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "TT006",
+   "Description": "EXTENSION LEAD",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "TT007",
+   "Description": "APPLIANCE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "TT008",
+   "Description": "TEST & TAG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "TT009",
+   "Description": "3 PHASE APPLIANCE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "TT010",
+   "Description": "EXTENSION LEAD 3 PHASE",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "UD000",
+   "Description": "DOOR (UNRATED)",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL040",
+   "Description": "VAPOUR LIQUID EXTG 1KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL070",
+   "Description": "VAPOUR LIQUID EXTG 1.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL080",
+   "Description": "VAPOUR LIQUID EXTG 2KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL090",
+   "Description": "VAPOUR LIQUID EXTG 2.25KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL130",
+   "Description": "VAPOUR LIQUID EXTG 2.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL160",
+   "Description": "VAPOUR LIQUID EXTG 3KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL190",
+   "Description": "VAPOUR LIQUID EXTG 3.5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL220",
+   "Description": "VAPOUR LIQUID EXTG 4KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL280",
+   "Description": "VAPOUR LIQUID EXTG 5KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL340",
+   "Description": "VAPOUR LIQUID EXTG 6KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL380",
+   "Description": "VAPOUR LIQUID EXTG 7KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL420",
+   "Description": "VAPOUR LIQUID EXTG 8KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL460",
+   "Description": "VAPOUR LIQUID EXTG 9KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL461",
+   "Description": "VAPOUR LIQUID EXTG 9KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL510",
+   "Description": "VAPOUR LIQUID EXTG 10KG",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL511",
+   "Description": "VAP/ LIQUID EXTG 10KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL550",
+   "Description": "VAPOUR LIQUID EXTG 11KG+",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL551",
+   "Description": "VAP/LIQUID EXTG 11KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL641",
+   "Description": "VAP/LIQUID EXTG 15KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL671",
+   "Description": "VAP/LIQUID EXTG 20KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL771",
+   "Description": "VAP/LIQUID EXTG 40KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL811",
+   "Description": "VAP/LIQUID EXTG 50KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "VL851",
+   "Description": "VAP/LIQUID EXTG 60KG+ M",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WA080",
+   "Description": "WET CHEM ANS EXTG 2L ",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WA350",
+   "Description": "WET CHEM ANS EXTG 3.5L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WA380",
+   "Description": "WET CHEM ANS EXTG 7L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WA400",
+   "Description": "WET CHEM ANS EXTG  7.5L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WA460",
+   "Description": "WET CHEM ANS EXTG  9L+",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM001",
+   "Description": "IT EQUIPMENT",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM002",
+   "Description": "IT EQUIPMENT",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM003",
+   "Description": "Telstra Mobile Broadband",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM004",
+   "Description": "Combo 1 ",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM005",
+   "Description": "Combo 4",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM006",
+   "Description": "Combo 5",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM007",
+   "Description": "Combo 6",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM008",
+   "Description": "Combo 7",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM009",
+   "Description": "Combo 9",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM010",
+   "Description": "Combo 10",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM011",
+   "Description": "Combo 11",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM012",
+   "Description": "Combo 12",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM013",
+   "Description": "Combo 13",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM014",
+   "Description": "Canon Digital Camera",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM015",
+   "Description": "Canon UltraSonic Camera",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM016",
+   "Description": "Canon A650Is",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM017",
+   "Description": "Panasonic Video Camera",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM018",
+   "Description": "Sony XGA Projector",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM019",
+   "Description": "BenQ LightBox 2",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM020",
+   "Description": "Projector 3 (L 61A)",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM021",
+   "Description": "Redback Microphone 1",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM022",
+   "Description": "Redback Microphone 2",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM023",
+   "Description": "Redback Microphone 3",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM024",
+   "Description": "Dick Smith Microphone 1",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM025",
+   "Description": "Speakers",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM026",
+   "Description": "Screen 1",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM027",
+   "Description": "Screen 2",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM028",
+   "Description": "Tripod",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM029",
+   "Description": "Portable DVD Player",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM030",
+   "Description": "Marquee 3x3",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM031",
+   "Description": "Marquee 3x6",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM032",
+   "Description": "MFB Racing Marquee 3x3",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM033",
+   "Description": "MFB Racing Marquee 3x3 2",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM034",
+   "Description": "Comm Safety Month Banner",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM035",
+   "Description": "Wem Equipment",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM036",
+   "Description": "Comm Ed",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM037",
+   "Description": "Display",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM038",
+   "Description": "Computer",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM039",
+   "Description": "Laser Measuring Device",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM040",
+   "Description": "Laser Pointer",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WM041",
+   "Description": "TomTom GPS",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WQ080",
+   "Description": "WET CHEM AQU EXTG 2L ",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WQ380",
+   "Description": "WET CHEM AQU EXTG 7L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WQ400",
+   "Description": "WET CHEM AQU EXTG 7.5L",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WQ460",
+   "Description": "WET CHEM EXTG AQU 9L+",
+   "PassiveFlag": 0
+ },
+ {
+   "EquipmentTypeID": "WT000",
+   "Description": "WATER SUPPLY TANK",
+   "PassiveFlag": 0
+ }
+]

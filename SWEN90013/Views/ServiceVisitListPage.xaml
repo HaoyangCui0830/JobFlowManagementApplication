@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SWEN90013.Views.ServiceVisitListPage"
+             x:Name="ServiceVisitLists"
+             xmlns:converter="clr-namespace:SWEN90013.Converters"
+             Title="Service Visits"
+             xmlns:components="clr-namespace:SWEN90013.CustomComponents">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:InverseBoolConverter x:Key="inverseBool" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="sync-icon.png" Command="{Binding SyncLocalDataCommand}"/>
+        <ToolbarItem Icon="calendar_toolbar.png" Clicked="Handle_Calendar_Clicked"/>
+        <ToolbarItem Icon="location_pin.png" Clicked="Handle_Map_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" 
+                     HorizontalOptions="Center"
+                     Margin="20, 20, 20, 20">
+            <Grid IsVisible="{Binding IsBusy}">
+                <Grid x:Name="loadingOverlay" VerticalOptions="Center" HorizontalOptions="Center">
+                    <ActivityIndicator Grid.Row="0" Grid.Column="0" IsRunning="true" Scale="2" Color="Black"/>
+                </Grid>
+            </Grid>
+            <DatePicker x:Name="scheduleDatePicker"
+                        Format="D"
+                        Grid.Row="0"
+                        IsVisible="false"
+                        Grid.Column="2"
+                        ></DatePicker>
+            <TimePicker x:Name="scheduleTimePicker"
+                        Grid.Row="0"
+                        IsVisible="false"
+                        Grid.Column="3"
+                        ></TimePicker>
+            <components:StyledSearchBar Placeholder="Search"
+                                        FontSize="20"
+                                        BackgroundColor="White"
+                                        TextColor="Black"
+                                        Text="{Binding SearchedTerm}"
+                                        IsVisible="{Binding IsBusy, Converter={StaticResource inverseBool}}">
+            </components:StyledSearchBar>
+            <Grid IsVisible="{Binding IsBusy, Converter={StaticResource inverseBool}}">
+                <Button Text="Filter"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        BackgroundColor="#DCDCDC"
+                        TextColor="Black"
+                        FontSize="20"
+                        Clicked="Filter_Clicked" Image="{Binding ImageFilter}" ContentLayout="Right,10"></Button>
+                <Button Text="Sort"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        BackgroundColor="#DCDCDC"
+                        TextColor="Black"
+                        FontSize="20"
+                        Clicked="Sort_Clicked"  Image="{Binding ImageSort}"></Button>
+            </Grid>
+            <ListView 
+                      HasUnevenRows="true"
+                      CachingStrategy="RetainElement"
+                      ItemsSource="{Binding Visits}"
+                      SeparatorVisibility="None"
+                      SelectionMode="Single"
+                      ItemTapped="ServiceVisit_Clicked"
+                      IsPullToRefreshEnabled="True"
+                      RefreshCommand="{Binding RefreshCommand}"
+                      IsRefreshing="{Binding IsRefreshing}"
+                  IsVisible="{Binding IsBusy, Converter={StaticResource inverseBool}}">
+                <ListView.ItemTemplate>  
+                    <DataTemplate>  
+                        <components:NoHighlightViewCell>
+                            <Frame OutlineColor="Gray"
+                                   BackgroundColor="{Binding StatusColor}" 
+                                   CornerRadius="10"
+                                   HasShadow="false"
+                                   Margin="0,10,0,10"
+                                   Padding="0"
+                                   HorizontalOptions="FillAndExpand"> 
+                                <StackLayout
+                                    Orientation="Vertical"
+                                    HorizontalOptions="FillAndExpand">
+                                    <Label Text="{Binding FullTitle}" 
+                                           FontSize="25"
+                                           TextColor="White"
+                                           FontAttributes="Bold"
+                                           Margin = "20, 10, 20, 10">
+                                    </Label>
+                                    <Grid BackgroundColor="White"
+                                          Padding="20, 10, 20, 10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0" Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="auto" />
+                                                <ColumnDefinition Width="auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Image Grid.Column="0" 
+                                                   Grid.Row="0" 
+                                                   Source="location-black.png" 
+                                                   WidthRequest="40" 
+                                                   HeightRequest="40"></Image>
+                                            <Label Grid.Column="1" 
+                                                   Grid.Row="0" 
+                                                   FontSize="20"
+                                                   Text="{Binding SiteSuburb}" 
+                                                   VerticalTextAlignment="Center">
+                                            </Label>
+                                        </Grid>
+                                        <Grid Grid.Column="1" Grid.Row="0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="auto" />
+                                                <ColumnDefinition Width="auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Image Grid.Column="0" 
+                                                   Grid.Row="0" 
+                                                   Source="calendar.png" 
+                                                   WidthRequest="40" 
+                                                   HeightRequest="40"></Image>
+                                            <Button Grid.Column="1" 
+                                                    Grid.Row="0"
+                                                    FontSize="20"
+                                                    TextColor="Red"
+                                                    x:Name="Schedule_date_button"
+                                                    Command="{Binding BindingContext.RescheduleCommand, Source={x:Reference ServiceVisitLists}}"
+                                                    CommandParameter="{Binding Id}"
+                                                    Text="{Binding ScheduledDateDescription, Mode=OneWay}"
+                                                    Clicked="Add_Schedule">
+                                            </Button>
+                                        </Grid>
+                                        <Grid Grid.Column="0" Grid.Row="1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="75" />
+                                                <ColumnDefinition Width="auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" 
+                                                   Grid.Row="0" 
+                                                   FontSize="20"
+                                                   Text="Status:" 
+                                                   FontAttributes="Bold"
+                                                   VerticalTextAlignment="Center">
+                                            </Label>
+                                            <Label Grid.Column="1" 
+                                                   Grid.Row="0" 
+                                                   FontSize="20"
+                                                   Text="{Binding StatusDescription}" 
+                                                   VerticalTextAlignment="Center">
+                                            </Label>
+                                        </Grid>
+                                        <Grid Grid.Column="1" Grid.Row="1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="auto" />
+                                                <ColumnDefinition Width="auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Image Grid.Column="0" 
+                                                   Grid.Row="0" 
+                                                   Source="clock-black.png" 
+                                                   WidthRequest="40" 
+                                                   HeightRequest="40"></Image>
+                                            <Label Grid.Column="1" 
+                                                   Grid.Row="0" 
+                                                   FontSize="20"
+                                                   Text="{Binding DueDate, StringFormat='{0:dd/MM/yyyy}'}" 
+                                                   VerticalTextAlignment="Center">
+                                            </Label>
+                                        </Grid>
+                                        <Grid Grid.Column="0" Grid.Row="2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="75" />
+                                                <ColumnDefinition Width="auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" 
+                                                   Grid.Row="0" 
+                                                   FontSize="20"
+                                                   Text="#Tasks:" 
+                                                   FontAttributes="Bold"
+                                                   VerticalTextAlignment="Center">
+                                            </Label>
+                                            <Label Grid.Column="1" 
+                                                   Grid.Row="0" 
+                                                   FontSize="20"
+                                                   Text="{Binding TotalTasks}" 
+                                                   VerticalTextAlignment="Center">
+                                            </Label>
+                                        </Grid>
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
+                        </components:NoHighlightViewCell>
+                    </DataTemplate>  
+                </ListView.ItemTemplate> 
+                <ListView.Footer>
+                    <Label />
+                </ListView.Footer>
+            </ListView>   
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

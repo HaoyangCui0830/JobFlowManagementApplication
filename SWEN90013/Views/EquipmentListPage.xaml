@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="SWEN90013.Views.EquipmentListPage"
+             xmlns:components="clr-namespace:SWEN90013.CustomComponents"
+             Title="Equipment List">
+    <ContentPage.Content>
+        <StackLayout>
+            <components:StyledSearchBar Placeholder="Search"
+                                        FontSize="20"
+                                        BackgroundColor="White"
+                                        TextColor="Black"
+                                        Text="{Binding SearchEquipmentTxt}">
+            </components:StyledSearchBar>
+            <ListView ItemsSource="{Binding ShowingEquipmentList}" ItemTapped="ListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding }"
+                                       VerticalOptions="Center"
+                                       Margin="20, 0, 0, 0"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

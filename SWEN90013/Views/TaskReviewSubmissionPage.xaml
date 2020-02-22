@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+    x:Class="SWEN90013.Views.TaskReviewSubmissionPage"
+    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+    Title="Review">
+    <ScrollView Orientation="Vertical"
+                VerticalOptions="Start">
+        <StackLayout>
+            <StackLayout Orientation="Vertical"
+                         Padding="10,10"
+                         HeightRequest="20"
+                         BackgroundColor="Silver">
+                <Label Text="List of Tasks" FontAttributes="Bold" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+            <flv:FlowListView FlowColumnCount="1"
+                              SeparatorVisibility="None"
+                              HasUnevenRows="False"
+                              RowHeight="80"
+                              VerticalOptions="Start"
+                              FlowItemsSource="{Binding TaskList}">
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <Grid Padding="20, 20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70*"/>
+                                <ColumnDefinition Width="30*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80*"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Column="0"
+                                   Grid.Row="0"
+                                   VerticalTextAlignment="Center"
+                                   VerticalOptions="Center"
+                                   FontAttributes="Bold"
+                                   Text="{Binding TaskInfo.TaskTypeDescription}" />
+
+                            <Button
+                                   Grid.Column="1"
+                                   Grid.Row="0"
+                                   VerticalOptions="Center"
+                                   HeightRequest="80"
+                                   WidthRequest="100"
+                                   TextColor="White"
+                                   HorizontalOptions="Center"
+                                   Text="{Binding ThisResult}"
+                                   BackgroundColor="{Binding StatusColor}"/>
+                           
+                            </Grid>
+                        </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+            </flv:FlowListView>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical"
+                         Padding="20,20"
+                         HeightRequest="20"
+                         BackgroundColor="Silver">
+                <Label Text="Status" FontAttributes="Bold" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+
+            <Picker x:Name="picker"
+                    Title="Revisit Required"
+                    SelectedItem="{Binding ChosenStatus}"
+                    ItemsSource="{Binding DropDownStatus}" />
+
+            <StackLayout Orientation="Vertical"
+                         Padding="20,20"
+                         HeightRequest="20"
+                         BackgroundColor="Silver">
+                <Label Text="Notes" FontAttributes="Bold" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical"
+                         Padding="20,20">
+                <Entry
+                    Placeholder="Write something here..."
+                    HeightRequest="200"
+                    Text="{Binding Notes}"/>
+        </StackLayout>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Column="0"
+                             Grid.Row="0"
+                             HeightRequest="50"
+                             Orientation="Horizontal"
+                             Padding="20,20">
+
+                    <Label VerticalOptions="Center"
+                           VerticalTextAlignment="Center"
+                           Text="Customer Inspection"/>
+                    <input:CheckBox
+                        Padding="10,0"
+                        VerticalOptions="Center"
+                        Type="Check"
+                        IsChecked="{Binding CustomerInspection}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1"
+                             Grid.Row="0"
+                             HeightRequest="50"
+                             Orientation="Horizontal"
+                             Padding="20,20">
+
+                    <Label VerticalOptions="Center"
+                           VerticalTextAlignment="Center"
+                           Text="Technician Inspection"/>
+                    <input:CheckBox
+                        Padding="10,0"
+                        VerticalOptions="Center"
+                        Type="Check"
+                        IsChecked= "{Binding TechnicianInspection}"/>
+
+                </StackLayout>
+
+                <StackLayout Grid.Column="0"
+                             Grid.Row="1"
+                             Orientation="Horizontal"
+                             Padding="20,20">
+
+                    <Label Text="{Binding CurrentDate}" HorizontalOptions="Center"/>
+
+                </StackLayout>
+
+                <StackLayout Grid.Column="1"
+                             Grid.Row="1"
+                             Orientation="Horizontal"
+                             Padding="20,20">
+
+                    <Label Text="{Binding CurrentDate}" HorizontalOptions="Center"/>
+
+                </StackLayout>
+            </Grid>
+            
+            <Button
+                Grid.Row='2'
+                Text="Submit"
+                BackgroundColor="Red"
+                TextColor="White"
+                Command="{Binding SubmitCommand}"/>
+           
+
+    </StackLayout>
+
+ </ScrollView>
+
+</ContentPage>

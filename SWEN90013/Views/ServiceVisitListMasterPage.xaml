@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="SWEN90013.Views.ServiceVisitListMasterPage"
+                  NavigationPage.HasNavigationBar="false"
+                  MasterBehavior="Popover">
+    <MasterDetailPage.Master>
+        <ContentPage Padding="10"
+                     Icon="hamburger.png"
+                     Title="MasterMenu"
+                     BackgroundColor="#fafafa">
+            <ContentPage.ToolbarItems>
+                <ToolbarItem Name="MenuItem1" Order="Primary" Text="Item 1" Priority="0" />
+                <ToolbarItem Name="MenuItem2" Order="Primary" Text="Item 2" Priority="1" />
+            </ContentPage.ToolbarItems>
+            <ContentPage.Content>
+                <StackLayout Margin="5,30,5,5">
+                    <Label x:Name="UsernameLabel"
+                           FontSize="25"
+                           HorizontalOptions="Center"
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           Margin="0, 10, 0, 10"></Label>
+                    <BoxView Color="Black"
+                             HeightRequest="2"
+                             />
+                    <Grid Margin="0, 15, 0, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" 
+                                Grid.Row="0" 
+                                Source="power.png" 
+                                WidthRequest="40" 
+                                HeightRequest="40"
+                                Margin="0, 0, 10, 0"></Image>
+                        <Button Grid.Column="1" 
+                                Grid.Row="0" 
+                                FontSize="20"
+                                TextColor="Black"
+                                VerticalOptions="Center"
+                                Text="Logout"
+                                Clicked="Logout_Clicked">
+                        </Button>
+                    </Grid>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

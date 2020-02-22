@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SWEN90013.Views.TaskPage"
+             xmlns:local="clr-namespace:SWEN90013.ViewModels"
+             xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+             Title="Task">
+
+    <ContentPage.BindingContext>
+        <local:TaskPageViewModel></local:TaskPageViewModel>
+    </ContentPage.BindingContext>
+    <StackLayout HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand">
+        <ScrollView Orientation="Vertical">
+            <StackLayout x:Name="segContainer"
+                         Padding="0, 20"
+                         Spacing="12">
+                <StackLayout Padding="20, 0">
+                    <controls:SegmentedControl x:Name="segControl"
+                                               ValueChanged="SegControl_ValueChanged"
+                                               TintColor="Red">
+                        <controls:SegmentedControl.Children>
+                            <controls:SegmentedControlOption Text="Details" />
+                            <controls:SegmentedControlOption Text="Test" />
+                            <controls:SegmentedControlOption Text="Timeline" />
+                        </controls:SegmentedControl.Children>
+                    </controls:SegmentedControl>
+                </StackLayout>
+                
+                <!--This is for Details-->
+                <StackLayout x:Name="TaskDetails" 
+                             IsVisible="{Binding IsShowingDetails}">
+                </StackLayout>
+
+                <!--This is for Test-->
+                <StackLayout x:Name="TaskTest"  
+                             IsVisible="{Binding IsShowingTest}">
+                </StackLayout>
+
+
+                <!--This is for TimeLine-->
+                <StackLayout x:Name="TaskTimeline" 
+                             IsVisible="{Binding IsShowingTimeline}">
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

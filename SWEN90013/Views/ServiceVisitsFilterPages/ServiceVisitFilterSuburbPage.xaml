@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SWEN90013.Views.ServiceVisitPages.ServiceVisitFilterSuburbPage" 
+             Title="Suburb"
+             xmlns:components="clr-namespace:SWEN90013.CustomComponents">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">    
+            <components:StyledSearchBar Placeholder="Search"
+                                        FontSize="20"
+                                        BackgroundColor="White"
+                                        TextColor="Black"
+                                        Text="{Binding SearchedTerm}"
+                                    >
+            </components:StyledSearchBar>        
+            <ListView ItemsSource="{Binding Suburbs}" ItemTapped="Suburb_Tapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                    <ViewCell>
+                     <StackLayout Orientation="Horizontal" >         
+                     <Label Text="{Binding SuburbName}" VerticalOptions="Center" Margin="20,0,0,0"/>
+                     <Image Source="checked.png" 
+                        WidthRequest="20" 
+                        HeightRequest="30"
+                        HorizontalOptions="EndAndExpand" 
+                        Margin="0,0,20,0"
+                        IsVisible="{Binding IsSelected}"/>
+                     </StackLayout>
+                     </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                </ListView>
+              <Button BackgroundColor="Red" Text="CONFIRM" TextColor="White" CornerRadius="0" Clicked="Confirm_Clicked">
+        </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

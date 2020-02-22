@@ -1,0 +1,25 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        x:Class="SWEN90013.Views.BarcodeScanPage"
+                        xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+                        Title="Barcode Scanner">
+    <ContentPage.ToolbarItems>
+         <ToolbarItem Text="Input Barcode Manually" Clicked="Input_Barcode_Manually"/>
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+    <BoxView Grid.Row="0" BackgroundColor="Gray"/>
+    <Label Text="Please Scan the Barcode this way" FontSize="Large" HorizontalOptions="CenterAndExpand" TextColor="red"></Label>
+    <Image Source="barcode_scan_direction"></Image>
+    <zxing:ZXingScannerView x:Name="_scanView" IsScanning="true" Result="{Binding Result, Mode=TwoWay}" OnScanResult="Handle_OnScanResult"
+                            WidthRequest="200" HeightRequest="400" ScanResultCommand="{Binding QRScanResultCommand}" Grid.Row="1"/>
+    <BoxView Grid.Row="2" BackgroundColor="Gray" />
+    
+    </Grid>
+    
+</ContentPage>

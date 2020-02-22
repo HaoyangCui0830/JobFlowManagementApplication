@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converter="clr-namespace:SWEN90013.Converters"
+    x:Class="SWEN90013.Views.TaskPages.TaskTestComment">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:InverseBoolConverter x:Key="inverseBool" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid Padding="0, 20, 0, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid IsVisible="{Binding IsBusy}"
+                  Grid.Row="0">
+                <Grid x:Name="loadingOverlay" VerticalOptions="Center" HorizontalOptions="Center">
+                    <ActivityIndicator Grid.Row="0" Grid.Column="0" IsRunning="true" Scale="2" Color="Black"/>
+                    <Label Grid.Row="1" Grid.Column="0" Text="Uploading..."/>
+                </Grid>
+            </Grid>
+            <StackLayout Orientation="Vertical" Grid.Row="1">
+                <ImageButton x:Name="backgroundImage"
+                             Source="{Binding ImageUrl}"
+                             Margin="10, 15, 10, 15"
+                             Aspect="AspectFit"
+                             Clicked="UploadCommentPic_Button_Clicked"
+                             HeightRequest="400"
+                             WidthRequest="400"
+                             IsVisible="{Binding IsBusy, Converter={StaticResource inverseBool}}"/>
+                <Entry Text="{Binding Comment}"
+                        Placeholder="Type something here.."
+                        HeightRequest="120"></Entry>
+            </StackLayout>
+            <Button Text="Submit"
+                    BackgroundColor="Red"
+                    VerticalOptions="End"
+                    TextColor="White"
+                    Grid.Row="2"
+                    Command="{Binding AddCommentCommand}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

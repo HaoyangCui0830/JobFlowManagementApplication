@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SWEN90013.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout
+        VerticalOptions="Center"
+        Spacing="20"
+        Orientation="Vertical">
+        
+        <Image Source="FesLogo.png"
+               WidthRequest="{OnPlatform iOS=175, Android=250}"
+               HorizontalOptions="Center"/>
+        <Entry Placeholder="Username"
+               ClassId="UsernameEntry"
+               Text="{Binding Username}"
+               Keyboard="Default" 
+               HeightRequest="70"
+               Margin="120,10"
+               IsTextPredictionEnabled="false"/>
+        <Entry Placeholder="Password"
+               ClassId="PasswordEntry"
+               Text="{Binding Password}"
+               HeightRequest="70"
+               Keyboard="Default"
+               IsPassword="true" 
+               Margin="120,10"/>
+        <Button Text="Login" 
+                FontSize="20" 
+                HeightRequest="70"
+                BackgroundColor="Red"
+                Margin="120,10"
+                TextColor="White" 
+                Command="{Binding SubmitCommand}"/>
+    </StackLayout>
+</ContentPage>

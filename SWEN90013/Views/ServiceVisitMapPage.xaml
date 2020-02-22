@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SWEN90013"
+             x:Class="SWEN90013.Views.ServiceVisitMapPage"
+             xmlns:components="clr-namespace:SWEN90013.CustomComponents.MapTools"
+             IsVisible="{Binding IsBusy}">
+    <ContentPage.Content>
+         <components:ServiceVisitMap x:Name="serviceVisitMap"
+                                     MapType="Street"
+                                     WidthRequest="{x:Static local:App.ScreenWidth}"
+                                     HeightRequest="{x:Static local:App.ScreenHeight}"/>
+    </ContentPage.Content> 
+</ContentPage>
